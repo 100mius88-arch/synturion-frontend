@@ -2,75 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SynTurion Technologies (Coming soon) — Crafting Code. Creating Impact.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>SynTurion Technologies — Crafting Code. Creating Impact.</title>
   <meta name="description" content="SynTurion Technologies Private Limited — Software development, digital platforms, web & mobile apps, UI technologies, IT tools & frameworks, lead generation platforms, and IT consulting & advisory services." />
   <meta name="theme-color" content="#0D1B2A" />
-  <meta property="og:title" content="SynTurion Technologies — Crafting Code. Creating Impact.">
-  <meta property="og:description" content="Software development, digital platforms, and IT consulting.">
-  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="dark light">
 
   <style>
     :root{
-      /* Branding palette */
       --deep-blue:#0D1B2A;
       --teal:#00C7B1;
       --orange:#FF7A00;
       --panel:#151515;
       --text:#FFFFFF;
-      --muted:#BFBFBF;
+      --muted:#C9CDD1;
       --bg:#101010;
       --radius:18px;
-      --shadow:0 10px 28px rgba(0,0,0,.45);
+      --shadow:0 10px 28px rgba(0,0,0,.35);
+      --tile-bd:#1e1e1e;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0; background: radial-gradient(1200px 1200px at 80% -10%, #083c37 0%, rgba(16,16,16,0) 60%), var(--bg);
+      margin:0;
+      background: radial-gradient(1200px 1200px at 80% -10%, rgba(0,199,177,.15) 0%, rgba(16,16,16,0) 60%), var(--bg);
       color:var(--text);
-      font:400 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-      display:flex; align-items:center; justify-content:center; padding:24px;
+      font:400 16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,"Noto Sans",sans-serif;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
-    .wrap{width:min(1040px,100%); margin-inline:auto}
+
+    .wrap{width:min(1040px,100%); margin-inline:auto; padding:20px 16px 32px}
     .card{
       background: linear-gradient(180deg, #121212 0%, #0f0f0f 100%);
-      border:1px solid #1e1e1e; border-radius:var(--radius);
-      padding:36px 28px; box-shadow:var(--shadow);
-      position:relative; overflow:hidden;
+      border:1px solid var(--tile-bd);
+      border-radius:var(--radius);
+      padding:28px 22px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
     }
     .glow{position:absolute; inset:-2px; border-radius:inherit; pointer-events:none;
-      background: radial-gradient(560px 420px at 50% 0%, rgba(0,199,177,.28), transparent 60%);
+      background: radial-gradient(560px 420px at 50% 0%, rgba(0,199,177,.25), transparent 60%);
       mix-blend-mode:screen; opacity:.9}
-    header{text-align:center; margin-bottom:10px}
-    h1{margin:0 0 8px 0; font-weight:800; letter-spacing:.2px; font-size:clamp(28px,4.5vw,44px)}
+
+    header{text-align:center; margin-bottom:6px}
+    h1{margin:0 0 6px 0; font-weight:800; letter-spacing:.2px; font-size:clamp(24px,4.8vw,40px)}
     .brand{color:var(--teal)}
-    .tag{color:var(--muted); margin:0}
-    .row{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:26px}
+    .tag{color:var(--muted); margin:0; font-size:clamp(14px,3.6vw,16px)}
+
+    /* Services tiles */
+    .row{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:22px}
     .tile{
-      background:#121212; border:1px solid #1d1d1d; border-radius:16px; padding:18px; min-height:116px
+      background:#141414; border:1px solid var(--tile-bd); border-radius:16px; padding:16px; min-height:110px
     }
     .tile b{display:block; font-size:18px; margin-bottom:6px}
-    .tile span{color:var(--muted); font-size:13px}
-    @media (max-width:780px){ .row{grid-template-columns:1fr} }
+    .tile span{color:var(--muted); font-size:14px}
 
-    .cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:26px 0 8px}
+    /* Object clause block */
+    .object{
+      margin-top:18px; color:#e3e6e8; background:#101010;
+      border:1px solid var(--tile-bd); border-radius:14px; padding:14px 16px; font-size:15px; line-height:1.7
+    }
+
+    /* CTAs */
+    .cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:22px 0 6px}
     .btn{
-      appearance:none; border:none; cursor:pointer; padding:12px 18px; border-radius:14px; font-weight:700;
-      transition:.2s transform ease,.2s box-shadow ease; text-decoration:none; display:inline-flex; align-items:center; gap:10px
+      appearance:none; border:none; cursor:pointer; padding:14px 18px; border-radius:14px; font-weight:700;
+      transition:.2s transform ease,.2s box-shadow ease; text-decoration:none; display:inline-flex; align-items:center; gap:10px;
+      min-height:48px; letter-spacing:.2px; touch-action:manipulation
     }
     .btn-primary{background:var(--teal); color:#053d38}
-    .btn-primary:hover{transform:translateY(-1px); box-shadow:0 10px 24px rgba(0,199,177,.35)}
-    .btn-ghost{background:#141414; color:var(--text); border:1px solid #1f1f1f}
+    .btn-primary:hover{transform:translateY(-1px); box-shadow:0 10px 24px rgba(0,199,177,.32)}
+    .btn-ghost{background:#171717; color:var(--text); border:1px solid #242424}
     .btn-ghost:hover{transform:translateY(-1px); box-shadow:0 8px 18px rgba(0,0,0,.35)}
 
-    .legal{
-      margin-top:18px; color:#9aa3ab; font-size:12px; text-align:center
+    .links{margin-top:14px; color:#b7b7b7; font-size:14px; text-align:center}
+    .links a{color:#76efe3; text-decoration:none}
+    .legal{margin-top:14px; color:#9aa3ab; font-size:12px; text-align:center}
+
+    /* ===== Mobile-first adjustments ===== */
+    @media (max-width:480px){
+      .wrap{padding:16px 12px 28px}
+      .card{padding:22px 14px; border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,.28)}
+      .row{grid-template-columns:1fr; gap:12px}
+      .tile{padding:14px; border-radius:14px}
+      .tile b{font-size:17px}
+      .tile span{font-size:15px; line-height:1.75}
+      .object{font-size:15.5px; padding:14px}
+      .cta{gap:10px; margin:18px 0 4px}
+      .btn{width:100%; justify-content:center; font-size:16px}
+      .links{font-size:13.5px}
     }
-    .object{
-      margin-top:22px; color:#d6d6d6; background:#0f0f0f; border:1px solid #1a1a1a; border-radius:14px; padding:16px; font-size:14px
+
+    /* Medium screens */
+    @media (min-width:481px) and (max-width:900px){
+      .row{grid-template-columns:1fr 1fr}
+      .btn{min-width:200px}
     }
-    .links{margin-top:20px; color:#b7b7b7; font-size:13px; text-align:center}
-    .links a{color:#82fff1; text-decoration:none}
+
+    /* Improve tap target spacing in Safari iOS */
+    a, button{ -webkit-tap-highlight-color: rgba(255,255,255,0.05); }
   </style>
 </head>
 <body>
@@ -121,8 +152,8 @@
   </main>
 
   <script>
+    // current year
     document.getElementById("yr").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
