@@ -1,11 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SynTurion Coin</title>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SynTurion Coin — Coming Soon</title>
+  <meta name="description" content="SynTurion Coin (C2SD) — Launching soon." />
+  <style>
+    :root{
+      --bg:#101010;
+      --panel:#151515;
+      --text:#FFFFFF;
+      --muted:#BFBFBF;
+      --accent:#00B86B;      /* primary neon */
+      --accent-2:#7FFF00;    /* pop accent */
+      --ring:rgba(0,184,107,.35);
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background: radial-gradient(1200px 1200px at 80% -10%, #0c261a 0%, rgba(16,16,16,0) 60%) , var(--bg);
+      color:var(--text); font:400 16px/1.6 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .wrap{width:min(920px,100%); text-align:center}
+    .card{
+      background: linear-gradient(180deg, #121212 0%, #0f0f0f 100%);
+      border:1px solid #1e1e1e; border-radius:var(--radius); padding:36px 28px; box-shadow:var(--shadow);
+      position:relative; overflow:hidden;
+    }
+    .glow{position:absolute; inset:-2px; border-radius:inherit; pointer-events:none;
+      background: radial-gradient(500px 500px at 50% 0%, var(--ring), transparent 60%);
+      mix-blend-mode:screen; opacity:.7}
+    .logo{
+      height:72px; width:auto; display:block; margin:0 auto 10px auto; filter: drop-shadow(0 4px 18px rgba(0,184,107,.35));
+      object-fit:contain;
+    }
+    h1{margin:6px 0 8px 0; font-size: clamp(28px, 4vw, 40px); letter-spacing:.2px}
+    h1 .accent{color:var(--accent)}
+    p.sub{color:var(--muted); margin:0 0 22px 0}
+    .timer{
+      display:grid; grid-template-columns:repeat(4,minmax(70px,1fr)); gap:12px; margin:22px auto 26px; max-width:560px
+    }
+    .tbox{background:var(--panel); border:1px solid #1e1e1e; border-radius:14px; padding:14px 10px}
+    .tval{font-size:clamp(22px,4vw,34px); font-weight:700}
+    .tlab{color:var(--muted); font-size:12px; letter-spacing:.6px; text-transform:uppercase}
+    .cta{
+      display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:8px
+    }
+    .btn{
+      appearance:none; border:none; cursor:pointer; padding:12px 18px; border-radius:14px; font-weight:600; letter-spacing:.3px;
+      transition:.2s transform ease-in-out,.2s box-shadow ease-in-out;
+      box-shadow:0 0 0 0 transparent; text-decoration:none; display:inline-flex; align-items:center; gap:10px
+    }
+    .btn-primary{background:var(--accent); color:#062816}
+    .btn-primary:hover{transform:translateY(-1px); box-shadow:0 8px 24px rgba(0,184,107,.35)}
+    .btn-ghost{background:#141414; color:var(--text); border:1px solid #1f1f1f}
+    .btn-ghost:hover{transform:translateY(-1px); box-shadow:0 6px 18px rgba(0,0,0,.35)}
+    .links{margin-top:26px; color:var(--muted); font-size:13px}
+    .links a{color:var(--accent-2); text-decoration:none}
+    .grid{
+      margin-top:28px; display:grid; grid-template-columns:repeat(3,1fr); gap:12px
+    }
+    .kpi{
+      background:var(--panel); border:1px solid #1e1e1e; border-radius:14px; padding:16px
+    }
+    .kpi b{display:block; font-size:18px}
+    .kpi span{color:var(--muted); font-size:12px}
+    @media (max-width:640px){ .grid{grid-template-columns:1fr} }
+    footer{margin-top:18px; color:#8f8f8f; font-size:12px}
+  </style>
 </head>
-<body style="font-family:sans-serif; text-align:center; margin-top:100px;">
-  <h1>🚀 SynTurion Coin (C2SD)</h1>
-  <p>Welcome to the official portal. Stay tuned for the launch.</p>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="glow" aria-hidden="true"></div>
+
+      <!-- LOGO -->
+      <!-- Replace logoSrc below with your file name (e.g., 'logo.png') placed in the repo root -->
+      <img id="logo" class="logo" alt="SynTurion" />
+
+      <h1>SynTurion Coin <span class="accent">(C2SD)</span></h1>
+      <p class="sub">Borderless. Compliant. On-Chain. Launching soon on Solana.</p>
+
+      <!-- COUNTDOWN -->
+      <div class="timer" role="timer" aria-live="polite">
+        <div class="tbox"><div class="tval" id="dd">--</div><div class="tlab">Days</div></div>
+        <div class="tbox"><div class="tval" id="hh">--</div><div class="tlab">Hours</div></div>
+        <div class="tbox"><div class="tval" id="mm">--</div><div class="tlab">Minutes</div></div>
+        <div class="tbox"><div class="tval" id="ss">--</div><div class="tlab">Seconds</div></div>
+      </div>
+
+      <!-- CTAS -->
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:info@synturion.in">
+          ✉️ Get launch updates
+        </a>
+        <a class="btn btn-ghost" href="https://github.com/100mius88-arch/synturion-frontend" target="_blank" rel="noopener">
+          ⭐ Star the repo
+        </a>
+      </div>
+
+      <!-- QUICK KPIs / PLACEHOLDERS -->
+      <div class="grid">
+        <div class="kpi"><b>Solana</b><span>Fast, low-fee settlement</span></div>
+        <div class="kpi"><b>USD Peg</b><span>Stable by design (C2SD)</span></div>
+        <div class="kpi"><b>Compliance-first</b><span>OFAC & jurisdiction filters</span></div>
+      </div>
+
+      <div class="links">
+        <a href="https://synturion.in/docs" target="_blank" rel="noopener">Docs</a> •
+        <a href="https://x.com" target="_blank" rel="noopener">X/Twitter</a> •
+        <a href="https://t.me" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </section>
+
+    <footer>© <span id="year"></span> SynTurion. All rights reserved.</footer>
+  </main>
+
+  <script>
+    // ==== EDIT THESE FEW LINES ====
+    const launchAt = new Date("2025-10-15T00:00:00+05:30"); // target launch (IST). Change the date/time.
+    const logoSrc = "logo.png"; // put a file named logo.png in repo root (or leave blank to hide)
+    // ==============================
+
+    // Logo init
+    const logoEl = document.getElementById("logo");
+    if (logoSrc && logoSrc.trim() !== "") { logoEl.src = logoSrc; } else { logoEl.style.display = "none"; }
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Countdown logic
+    const dd = document.getElementById("dd"),
+          hh = document.getElementById("hh"),
+          mm = document.getElementById("mm"),
+          ss = document.getElementById("ss");
+
+    function pad(n){ return String(n).padStart(2,"0"); }
+
+    function tick(){
+      const now = new Date();
+      let diff = launchAt - now;
+      if (diff < 0) diff = 0;
+
+      const s = Math.floor(diff/1000);
+      const days = Math.floor(s / (3600*24));
+      const hours = Math.floor((s % (3600*24)) / 3600);
+      const mins = Math.floor((s % 3600) / 60);
+      const secs = s % 60;
+
+      dd.textContent = pad(days);
+      hh.textContent = pad(hours);
+      mm.textContent = pad(mins);
+      ss.textContent = pad(secs);
+    }
+    tick();
+    setInterval(tick, 1000);
+  </script>
 </body>
 </html>
