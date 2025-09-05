@@ -3,98 +3,125 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SynTurion Technologies — Software & Blockchain Solutions</title>
-  <meta name="description" content="SynTurion Technologies — Building secure, scalable, and compliant fintech + blockchain software solutions." />
+  <title>SynTurion Technologies — Crafting Code. Creating Impact.</title>
+  <meta name="description" content="SynTurion Technologies Private Limited — Software development, digital platforms, web & mobile apps, UI technologies, IT tools & frameworks, lead generation platforms, and IT consulting & advisory services." />
+  <meta name="theme-color" content="#0D1B2A" />
+  <meta property="og:title" content="SynTurion Technologies — Crafting Code. Creating Impact.">
+  <meta property="og:description" content="Software development, digital platforms, and IT consulting.">
+  <meta property="og:type" content="website">
+
   <style>
-    :root {
-      --bg:#101010;
+    :root{
+      /* Branding palette */
+      --deep-blue:#0D1B2A;
+      --teal:#00C7B1;
+      --orange:#FF7A00;
       --panel:#151515;
       --text:#FFFFFF;
       --muted:#BFBFBF;
-      --accent:#00B86B;
-      --accent-2:#7FFF00;
-      --ring:rgba(0,184,107,.35);
-      --shadow:0 10px 30px rgba(0,0,0,.45);
+      --bg:#101010;
       --radius:18px;
+      --shadow:0 10px 28px rgba(0,0,0,.45);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0; background: radial-gradient(1200px 1200px at 80% -10%, #0c261a 0%, rgba(16,16,16,0) 60%) , var(--bg);
-      color:var(--text); font:400 16px/1.6 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      margin:0; background: radial-gradient(1200px 1200px at 80% -10%, #083c37 0%, rgba(16,16,16,0) 60%), var(--bg);
+      color:var(--text);
+      font:400 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
       display:flex; align-items:center; justify-content:center; padding:24px;
     }
-    .wrap{width:min(920px,100%); text-align:center}
+    .wrap{width:min(1040px,100%); margin-inline:auto}
     .card{
       background: linear-gradient(180deg, #121212 0%, #0f0f0f 100%);
-      border:1px solid #1e1e1e; border-radius:var(--radius); padding:36px 28px; box-shadow:var(--shadow);
+      border:1px solid #1e1e1e; border-radius:var(--radius);
+      padding:36px 28px; box-shadow:var(--shadow);
       position:relative; overflow:hidden;
     }
     .glow{position:absolute; inset:-2px; border-radius:inherit; pointer-events:none;
-      background: radial-gradient(500px 500px at 50% 0%, var(--ring), transparent 60%);
-      mix-blend-mode:screen; opacity:.7}
-    h1{margin:6px 0 8px 0; font-size: clamp(28px, 4vw, 40px); letter-spacing:.2px}
-    h1 .accent{color:var(--accent)}
-    p.sub{color:var(--muted); margin:0 0 22px 0}
-    .grid{margin-top:28px; display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
-    .kpi{background:var(--panel); border:1px solid #1e1e1e; border-radius:14px; padding:16px}
-    .kpi b{display:block; font-size:18px}
-    .kpi span{color:var(--muted); font-size:12px}
-    @media (max-width:640px){ .grid{grid-template-columns:1fr} }
-    .cta{margin-top:24px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
-    .btn{
-      appearance:none; border:none; cursor:pointer; padding:12px 18px; border-radius:14px; font-weight:600; letter-spacing:.3px;
-      transition:.2s transform ease-in-out,.2s box-shadow ease-in-out;
-      box-shadow:0 0 0 0 transparent; text-decoration:none; display:inline-flex; align-items:center; gap:10px
+      background: radial-gradient(560px 420px at 50% 0%, rgba(0,199,177,.28), transparent 60%);
+      mix-blend-mode:screen; opacity:.9}
+    header{text-align:center; margin-bottom:10px}
+    h1{margin:0 0 8px 0; font-weight:800; letter-spacing:.2px; font-size:clamp(28px,4.5vw,44px)}
+    .brand{color:var(--teal)}
+    .tag{color:var(--muted); margin:0}
+    .row{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:26px}
+    .tile{
+      background:#121212; border:1px solid #1d1d1d; border-radius:16px; padding:18px; min-height:116px
     }
-    .btn-primary{background:var(--accent); color:#062816}
-    .btn-primary:hover{transform:translateY(-1px); box-shadow:0 8px 24px rgba(0,184,107,.35)}
+    .tile b{display:block; font-size:18px; margin-bottom:6px}
+    .tile span{color:var(--muted); font-size:13px}
+    @media (max-width:780px){ .row{grid-template-columns:1fr} }
+
+    .cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:26px 0 8px}
+    .btn{
+      appearance:none; border:none; cursor:pointer; padding:12px 18px; border-radius:14px; font-weight:700;
+      transition:.2s transform ease,.2s box-shadow ease; text-decoration:none; display:inline-flex; align-items:center; gap:10px
+    }
+    .btn-primary{background:var(--teal); color:#053d38}
+    .btn-primary:hover{transform:translateY(-1px); box-shadow:0 10px 24px rgba(0,199,177,.35)}
     .btn-ghost{background:#141414; color:var(--text); border:1px solid #1f1f1f}
-    .btn-ghost:hover{transform:translateY(-1px); box-shadow:0 6px 18px rgba(0,0,0,.35)}
-    .links{margin-top:26px; color:var(--muted); font-size:13px}
-    .links a{color:var(--accent-2); text-decoration:none}
-    footer{margin-top:18px; color:#8f8f8f; font-size:12px}
+    .btn-ghost:hover{transform:translateY(-1px); box-shadow:0 8px 18px rgba(0,0,0,.35)}
+
+    .legal{
+      margin-top:18px; color:#9aa3ab; font-size:12px; text-align:center
+    }
+    .object{
+      margin-top:22px; color:#d6d6d6; background:#0f0f0f; border:1px solid #1a1a1a; border-radius:14px; padding:16px; font-size:14px
+    }
+    .links{margin-top:20px; color:#b7b7b7; font-size:13px; text-align:center}
+    .links a{color:#82fff1; text-decoration:none}
   </style>
 </head>
 <body>
   <main class="wrap">
-    <section class="card">
+    <section class="card" aria-label="SynTurion Launch">
       <div class="glow" aria-hidden="true"></div>
 
-      <h1>SynTurion <span class="accent">Technologies</span></h1>
-      <p class="sub">Engineering Tomorrow’s Software, Today.Blockchain-Powered Innovation.</p>
+      <header>
+        <h1>SynTurion <span class="brand">Technologies</span></h1>
+        <p class="tag">Crafting Code. Creating Impact.</p>
+      </header>
 
-      <!-- SERVICES -->
-      <div class="grid">
-        <div class="kpi"><b>Software Development</b><span>Custom web & mobile applications</span></div>
-        <div class="kpi"><b>Blockchain R&D</b><span>Smart contracts & on-chain systems</span></div>
-        <div class="kpi"><b>Fintech Solutions</b><span>Compliance-first financial software</span></div>
+      <!-- Services -->
+      <div class="row" role="list">
+        <div class="tile" role="listitem">
+          <b>Software Development</b>
+          <span>Custom enterprise, web & mobile applications tailored to your use-cases.</span>
+        </div>
+        <div class="tile" role="listitem">
+          <b>Digital Platforms</b>
+          <span>Scalable SaaS, lead-gen, and aggregator platforms with modern UI technology.</span>
+        </div>
+        <div class="tile" role="listitem">
+          <b>IT Consulting</b>
+          <span>Advisory, architecture and delivery for high-reliability, secure systems.</span>
+        </div>
       </div>
 
-      <!-- CTAS -->
+      <!-- MCA-aligned object clause -->
+      <div class="object">
+        <strong>What we do:</strong> To carry on the business of software development, digital platforms, web and mobile applications,
+        user interface technologies, IT tools, application frameworks, technology solutions, lead generation, user interface solutions,
+        and aggregator platforms for software; and to engage in IT consulting and advisory services.
+      </div>
+
+      <!-- CTAs -->
       <div class="cta">
-        <a class="btn btn-primary" href="mailto:admin@synturion.in">
-          ✉️ Contact Us
-        </a>
-        <a class="btn btn-ghost" href="https://github.com/100mius88-arch" target="_blank" rel="noopener">
-          ⭐ Explore GitHub
-        </a>
+        <a class="btn btn-primary" href="mailto:admin@synturion.in">✉️ Contact: admin@synturion.in</a>
+        <a class="btn btn-ghost" href="https://github.com/100mius88-arch" target="_blank" rel="noopener">⭐ Explore GitHub</a>
       </div>
 
       <div class="links">
-        <a href="#">Docs</a> •
-        <a href="#">LinkedIn</a> •
-        <a href="#">Twitter</a>
+        <a href="#">Company Profile</a> • <a href="#">Careers</a> • <a href="#">LinkedIn</a>
       </div>
-    </section>
 
-    <footer>© <span id="year"></span> SynTurion Technologies. All rights reserved.</footer>
+      <div class="legal">© <span id="yr"></span> SynTurion Technologies Private Limited. All rights reserved.</div>
+    </section>
   </main>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("yr").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
-
